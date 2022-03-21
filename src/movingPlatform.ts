@@ -16,7 +16,7 @@ export function createMovingPlatform(
     new utils.ToggleComponent(
       utils.ToggleState.Off,
       (value: utils.ToggleState) => {
-        if (value == utils.ToggleState.On) {
+        if (value === utils.ToggleState.On) {
           entity.addComponentOrReplace(
             new utils.MoveTransformComponent(startPos, endPos, time, () => {
               entity.getComponent(utils.ToggleComponent).toggle()

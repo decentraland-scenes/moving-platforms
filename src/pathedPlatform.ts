@@ -15,7 +15,7 @@ export function createPathedPlatform(
     new utils.ToggleComponent(
       utils.ToggleState.Off,
       (value: utils.ToggleState) => {
-        if (value == utils.ToggleState.On) {
+        if (value === utils.ToggleState.On) {
           entity.addComponentOrReplace(
             new utils.FollowPathComponent(path, time, () => {
               entity.getComponent(utils.ToggleComponent).toggle()

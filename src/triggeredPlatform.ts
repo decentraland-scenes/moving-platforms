@@ -27,7 +27,7 @@ export function createTriggeredPlatform(
       utils.ToggleState.Off,
       (value: utils.ToggleState) => {
         // Move the platform to the end position once the player steps onto the platform
-        if (value == utils.ToggleState.On) {
+        if (value === utils.ToggleState.On) {
           entity.addComponentOrReplace(
             new utils.MoveTransformComponent(
               new Vector3(14, 4, 12),
