@@ -1,7 +1,7 @@
 # Moving Platforms
 _demo of moving-platforms scene running in preview._
 
-![demo](https://github.com/decentraland-scenes/moving-platforms/blob/master/screenshots/moving-platforms.gif)
+![demo](https://github.com/decentraland-scenes/moving-platforms/blob/master/screenshot/moving-platforms.gif)
 
 ## Description
 A simple platformer that demonstrates various platform movements using code, which then enables you to sync up the position of the platforms with other players in the scene should you choose to do so. To view the scene, please visit [here](https://moving-platforms.vercel.app/).
