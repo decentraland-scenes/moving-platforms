@@ -12,7 +12,7 @@ export class PathedPlatform extends Entity {
       new utils.ToggleComponent(
         utils.ToggleState.Off,
         (value: utils.ToggleState) => {
-          if (value == utils.ToggleState.On) {
+          if (value === utils.ToggleState.On) {
             this.addComponentOrReplace(
               new utils.FollowPathComponent(path, time, () => {
                 this.getComponent(utils.ToggleComponent).toggle()

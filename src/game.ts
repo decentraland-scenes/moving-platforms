@@ -31,7 +31,7 @@ const verticalMovingPlatform = new MovingPlatform(
 )
 
 // Triggered platform
-let platformTriggerBox = new utils.TriggerBoxShape(
+const platformTriggerBox = new utils.TriggerBoxShape(
   new Vector3(2, 2, 2),
   new Vector3(0, 1.7, 0)
 ) // Modified to match platform size
@@ -42,11 +42,11 @@ const triggeredMovingPlatform = new TriggeredPlatform(
 )
 
 // Pathed platform
-let path = [
+const path = [
   new Vector3(6.5, 7, 4),
   new Vector3(6.5, 7, 12),
   new Vector3(6.5, 10.5, 12),
-  new Vector3(6.5, 10.5, 4),
+  new Vector3(6.5, 10.5, 4)
 ]
 const pathedPlatform = new PathedPlatform(
   new GLTFShape('models/movingPlatform.glb'),
@@ -55,7 +55,7 @@ const pathedPlatform = new PathedPlatform(
 )
 
 // Coin
-let coinTriggerBox = new utils.TriggerBoxShape(
+const coinTriggerBox = new utils.TriggerBoxShape(
   new Vector3(1.5, 3, 1.5),
   new Vector3(0, 1, 0)
 ) // Trigger shape for coin

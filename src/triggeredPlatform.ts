@@ -19,7 +19,7 @@ export class TriggeredPlatform extends Entity {
         },
         onCameraExit: () => {
           this.getComponent(utils.ToggleComponent).toggle()
-        },
+        }
       })
     )
 
@@ -28,7 +28,7 @@ export class TriggeredPlatform extends Entity {
         utils.ToggleState.Off,
         (value: utils.ToggleState) => {
           // Move the platform to the end position once the player steps onto the platform
-          if (value == utils.ToggleState.On) {
+          if (value === utils.ToggleState.On) {
             this.addComponentOrReplace(
               new utils.MoveTransformComponent(
                 new Vector3(14, 4, 12),

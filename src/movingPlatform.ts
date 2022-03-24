@@ -17,7 +17,7 @@ export class MovingPlatform extends Entity {
       new utils.ToggleComponent(
         utils.ToggleState.Off,
         (value: utils.ToggleState) => {
-          if (value == utils.ToggleState.On) {
+          if (value === utils.ToggleState.On) {
             this.addComponentOrReplace(
               new utils.MoveTransformComponent(startPos, endPos, time, () => {
                 this.getComponent(utils.ToggleComponent).toggle()
