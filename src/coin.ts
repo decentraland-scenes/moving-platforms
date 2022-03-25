@@ -13,28 +13,27 @@ coinPickupSound.addComponent(
 )
 engine.addEntity(coinPickupSound)
 
-export class Coin extends Entity {
-  constructor(
-    model: GLTFShape,
-    transform: Transform,
-    triggerShape: utils.TriggerBoxShape
-  ) {
-    super()
-    engine.addEntity(this)
-    this.addComponent(model)
-    this.addComponent(transform)
+export function createCoin(
+  model: GLTFShape,
+  transform: Transform,
+  triggerShape: utils.TriggerBoxShape
+): Entity {
+  const entity = new Entity()
+  engine.addEntity(entity)
+  entity.addComponent(model)
+  entity.addComponent(transform)
 
     // Create trigger for coin
-    this.addComponent(
+    entity.addComponent(
       new utils.TriggerComponent(triggerShape, {
         onCameraEnter: () => {
           // Camera enter
-          this.getComponent(Transform).scale.setAll(0)
+          entity.getComponent(Transform).scale.setAll(0)
           coinPickupSound.getComponent(AudioSource).playOnce()
         },
         onCameraExit: () => {
           // Camera exit
-          engine.removeEntity(this)
+          engine.removeEntity(entity)
         }
       })
     )
