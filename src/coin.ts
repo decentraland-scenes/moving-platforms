@@ -23,19 +23,19 @@ export function createCoin(
   entity.addComponent(model)
   entity.addComponent(transform)
 
-    // Create trigger for coin
-    entity.addComponent(
-      new utils.TriggerComponent(triggerShape, {
-        onCameraEnter: () => {
-          // Camera enter
-          entity.getComponent(Transform).scale.setAll(0)
-          coinPickupSound.getComponent(AudioSource).playOnce()
-        },
-        onCameraExit: () => {
-          // Camera exit
-          engine.removeEntity(entity)
-        }
-      })
-    )
-  }
+  // Create trigger for coin
+  entity.addComponent(
+    new utils.TriggerComponent(triggerShape, {
+      onCameraEnter: () => {
+        // Camera enter
+        entity.getComponent(Transform).scale.setAll(0)
+        coinPickupSound.getComponent(AudioSource).playOnce()
+      },
+      onCameraExit: () => {
+        // Camera exit
+        engine.removeEntity(entity)
+      },
+    })
+  )
+  return entity
 }

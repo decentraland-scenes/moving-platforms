@@ -46,7 +46,7 @@ const path = [
   new Vector3(6.5, 7, 4),
   new Vector3(6.5, 7, 12),
   new Vector3(6.5, 10.5, 12),
-  new Vector3(6.5, 10.5, 4)
+  new Vector3(6.5, 10.5, 4),
 ]
 createPathedPlatform(new GLTFShape('models/movingPlatform.glb'), path, 10)
 
